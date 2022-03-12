@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Dashboard
+    </title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="index.js" type="text/javascript"></script>
+
+</head>
+
+<body class="mybody">
+
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo-removebg-preview.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+            </a>
+        </div>
+    </nav>
+    </nav>
+
+    <div class="body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2">
+                    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+                        <div class="position-sticky">
+                            <div class="list-group list-group-flush mx-3 mt-4">
+                                <a href="dashboard.html" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span> dashboard</span>
+                                </a>
+                                <a href="StaffName.html" class="list-group-item list-group-item-action py-2 ripple">
+                                    <i class="fas fa-chart-area fa-fw me-3"></i><span>Staff names</span>
+                                </a>
+
+                                <a href="Staff id.html" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-line fa-fw me-3"></i><span>Staff ID</span></a>
+
+
+                                <a href="create_payroll.html" class="list-group-item list-group-item-action py-2 ripple active"><i class="fas fa-globe fa-fw me-3"></i><span>Create Payrol </span></a>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-10">
+
+
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-">
+                            <div>
+
+                                <h6 style="color: blue; text-align: center;">Enter daily Allowance in order to view weekly, monthly, semi annually, annually</h6>
+                                <form method="post" class="p-3 border" style="background-color:blue;color:black; border-radius: 7px; width: 90%;">
+                                    <div class="form-group">
+                                        <input type="text" id="fn" class="form-control" placeholder="firstName"><br />
+                                    </div>
+                                    <br />
+
+                                    <div class="form-group">
+                                        <input type="text" id="sn" class="form-control" placeholder="lastName"><br />
+                                    </div>
+                                    <br />
+
+
+
+                                    <div class="form-group">
+                                        <input type="number" id="Tr" class="form-control" placeholder="Transport Allowance"><br /> <br />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="number" id="Ma" class="form-control" placeholder="Meal Allowance"><br /> <br />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="number" id="Da" class="form-control" placeholder=" Data Allowance "><br /> <br />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="number " id="Me" class="form-control" placeholder="Medical Allowance "><br /> <br />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <select name="Allowance " id="Alw" class="form-control" required>
+                                        <option value="1">
+                                        select Allowance Type
+                                        </option>
+                                       
+                                        <option value="2">
+                                        weekly
+                                        </option>
+                            
+                                        <option value="3">
+                                            monthly
+                                            </option>
+                            
+                                           
+                            
+                                                <option value="4">
+                                                    semi-Annaul
+                                                    </option>
+                            
+                                                    <option value="5">
+                                                        Annaul
+                                                        </option>
+                                             </select><br /><br />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" class="form-control" style="background-color: red; color: #fff;" value="Submit" onclick="Payrol()" />
+                                    </div>
+
+                                    <div id="demo" style="background-color: #fff;">
+
+                                    </div>
+                                </form>
+
+                                <script type="">
+                                    document.getElementById("demo").innerHTML = "Allowance Analysis: Worker " + " " +localStorage.getItem("StorageFname") + " <br /> Weekly Amount: " + localStorage.getItem("StorageWeekly") + " <br /> Monthly Amount: "
+                                    + localStorage.getItem("Storagemonthly")+ "<br /> SemiAnnaul Amount: " + localStorage.getItem("StorageSemiAnnual") +"<br /> AnnualAmount: " + localStorage.getItem("StorageAnnual");
+
+
+                                </script>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-12" style="background-color: black; color: #fff;">
+                    <footer>
+                        <div class="row">
+                            <div class="col-sm-4">About Us <br /> This an app that helps you <br />keep a track on your <br />daily, weekly, semi-Annually <br />and Annually transaction
+                            </div>
+
+                            <div class="col-sm-4">
+                                <a href="dashboard.html" class=" py-2 ripple active" aria-current="true">
+                                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span> dashboard</span>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-4"><img src="logo-removebg-preview.png" alt="Avatar Logo" style="width:100px;" class="rounded-pill">
+                                </a> <br /></div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+</body>
+
+</html>
